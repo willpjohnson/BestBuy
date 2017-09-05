@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20170905175519) do
     t.string   "search_term"
     t.string   "brand"
     t.integer  "reviews"
-    t.integer  "rating"
+    t.float    "rating"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end

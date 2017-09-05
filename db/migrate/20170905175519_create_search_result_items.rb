@@ -5,7 +5,7 @@ class CreateSearchResultItems < ActiveRecord::Migration[5.0]
       t.string :search_term
       t.string :brand
       t.integer :reviews
-      t.integer :rating
+      t.float :rating
       t.timestamps
     end
   end

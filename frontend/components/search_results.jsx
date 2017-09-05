@@ -1,8 +1,7 @@
-
-
 import React from 'react';
 import { connect } from 'react-redux';
 
+import { volatilityDataCompiler, searchRankDataCompiler, brandCompDataCompiler } from '../graph_data';
 import { fetchNewSearch, fetchAllSearches, fetchMostRecentSearch } from '../actions/search_result_actions';
 
 class SearchResults extends React.Component {
@@ -24,20 +23,17 @@ class SearchResults extends React.Component {
       this.props.fetchAllSearches();
     }
 
-    let currentSmart = [{
-        x: ['Samsung', 'LG', 'Toshiba', 'Sony'],
-        y: [nextProps.current.samsung_smart_tv, nextProps.current.lg_smart_tv, nextProps.current.toshiba_smart_tv, nextProps.current.sony_smart_tv],
-        type: 'bar'
-    }];
+    let brandCompData = brandCompDataCompiler(nextProps.current);
+    Plotly.newPlot('current-smart-tv-graph', brandCompData.currentSmart);
+    Plotly.newPlot('current-curved-tv-graph', brandCompData.currentCurved);
 
-    let currentCurved = [{
-        x: ['Samsung', 'LG', 'Toshiba', 'Sony'],
-        y: [nextProps.current.samsung_curved_tv, nextProps.current.lg_curved_tv, nextProps.current.toshiba_curved_tv, nextProps.current.sony_curved_tv],
-        type: 'bar'
-    }];
+    let searchRankData = searchRankDataCompiler(nextProps.current);
+    Plotly.newPlot('reviews-scatter-graph', [searchRankData.reviewsSmart, searchRankData.reviewsCurved]);
+    Plotly.newPlot('ratings-scatter-graph', [searchRankData.ratingsSmart, searchRankData.ratingsCurved]);
 
-    Plotly.newPlot('current-smart-tv-graph', currentSmart);
-    Plotly.newPlot('current-curved-tv-graph', currentCurved);
+    let volatilityData = volatilityDataCompiler(nextProps.index);
+    Plotly.newPlot('smart-index-graph', [volatilityData.smartSamsungGraph,volatilityData.smartLGGraph,volatilityData.smartToshibaGraph,volatilityData.smartSonyGraph]);
+    Plotly.newPlot('curved-index-graph', [volatilityData.curvedSamsungGraph,volatilityData.curvedLGGraph,volatilityData.curvedToshibaGraph,volatilityData.curvedSonyGraph]);
   }
 
   render() {
@@ -74,9 +70,17 @@ class SearchResults extends React.Component {
                 </ul>
             </div>
           </div>
+          <h2>Number of Reviews (y) vs Search Ranking (x)</h2>
+          <div className="scatter-graph" id="reviews-scatter-graph"></div>
+          <h2>5-Star Ranking (y) vs Search Ranking (x)</h2>
+          <div className="scatter-graph" id="ratings-scatter-graph"></div>
         </div>
         <div id="index-results-div">
-
+          <h1>Reults History</h1>
+          <h2>'smart tv'</h2>
+          <div className="scatter-graph" id="smart-index-graph"></div>
+          <h2>'curved smart tv'</h2>
+          <div className="scatter-graph" id="curved-index-graph"></div>
         </div>
       </div>
     )
