@@ -1,0 +1,38 @@
+# == Schema Information
+#
+# Table name: search_results
+#
+#  id                     :integer          not null, primary key
+#  total_smart_tv         :integer
+#  samsung_smart_tv       :integer
+#  lg_smart_tv            :integer
+#  toshiba_smart_tv       :integer
+#  sony_smart_tv          :integer
+#  samsung_smart_tv_top3  :integer
+#  lg_smart_tv_top3       :integer
+#  toshiba_smart_tv_top3  :integer
+#  sony_smart_tv_top3     :integer
+#  total_curved_tv        :integer
+#  samsung_curved_tv      :integer
+#  lg_curved_tv           :integer
+#  toshiba_curved_tv      :integer
+#  sony_curved_tv         :integer
+#  samsung_curved_tv_top3 :integer
+#  lg_curved_tv_top3      :integer
+#  toshiba_curved_tv_top3 :integer
+#  sony_curved_tv_top3    :integer
+#  created_at             :datetime         not null
+#  updated_at             :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined. If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one: {}
+# column: value
+#
+two: {}
+# column: value

@@ -1,0 +1,29 @@
+{
+  "name": "BestBuy",
+  "version": "1.0.0",
+  "description": "1.The scraper will make a request to the website you want to scrape 2.The request will capture the HTML of the website and pass it along to ur server 3.Traverse the DOM and extract the information you want 4.Format the extracted data into a format you need 5. put that bish into your database 6. make the queries to produce the results",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "webpack": "^3.5.5"
+  }
+}
