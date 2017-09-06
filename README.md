@@ -87,17 +87,18 @@ This data is all summoned by the React frontend when an AJAX POST request is mad
 
 The app is currently being hosted on Heroku. Heroku uses an automatic scheduler to run a rake function (in this case, the 'update' function) every 24 hours. The data collection is a very expensive function that takes a long time and the Heroku scheduler is, unfortunately, not exactly regular. As such, the data collection is not as exactly accurate as I'd like. However, it's certainly regular enough for data analysis on search results.
 
-![image of heroku scheduler](public/heroku_scheduler.png)
+![image of heroku scheduler](public/heroku-scheduler.png)
 
 I've also included a button at the bottom of the page of the offline (non-Heroku) version for deliberate data collection. The offline version is not scheduled for every 24 hours.
 
 ## Sample Data
 SearchResult is the collection of all data regarding total results, total results by brand, etc for any given data collection.
 
-id, total_smart_tv, samsung_smart_tv, lg_smart_tv, toshiba_smart_tv, sony_smart_tv, samsung_smart_tv_top3, lg_smart_tv_top3, toshiba_smart_tv_top3, sony_smart_tv_top3...
-4, 184, 59, 30, 6, 26, 1, 0, 0, 0...
-total_curved_tv, samsung_curved_tv, lg_curved_tv, toshiba_curved_tv, sony_curved_tv, samsung_curved_tv_top3, lg_curved_tv_top3, toshiba_curved_tv_top3, sony_curved_tv_top3
-12, 12, 0, 0, 0, 3, 0, 0, 0
+id, total_smart_tv, samsung_smart_tv, lg_smart_tv, toshiba_smart_tv, sony_smart_tv, samsung_smart_tv_top3, lg_smart_tv_top3, toshiba_smart_tv_top3, sony_smart_tv_top3, total_curved_tv, samsung_curved_tv, lg_curved_tv, toshiba_curved_tv, sony_curved_tv, samsung_curved_tv_top3, lg_curved_tv_top3, toshiba_curved_tv_top3, sony_curved_tv_top3
+
+4, 184, 59, 30, 6, 26, 1, 0, 0, 0, 12, 12, 0, 0, 0, 3, 0, 0, 0
+
+
 
 SearchResultItem is a more specific breakdown of the search result item itself, including reviews, ratings, etc.
 
