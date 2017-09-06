@@ -35,7 +35,7 @@ class SearchResult < ApplicationRecord
   def self.update
     smart_tv = SearchResult.get_results('https://www.bestbuy.com/site/searchpage.jsp?cp=', '&searchType=search&st=smart%20tv&_dyncharset=UTF-8&id=pcat17071&type=page&sc=Global&nrp=&sp=&qp=&list=n&af=true&iht=y&usc=All%20Categories&ks=960&keys=keys')
     curved_tv = SearchResult.get_results('https://www.bestbuy.com/site/searchpage.jsp?cp=', '&searchType=search&st=curved%20smart%20tv&_dyncharset=UTF-8&id=pcat17071&type=page&sc=Global&nrp=&sp=&qp=&list=n&af=true&iht=y&usc=All%20Categories&ks=960&keys=keys')
-    return SearchResult.new({
+    @search_result = SearchResult.new({
       total_smart_tv: smart_tv[:all_results].length,
       samsung_smart_tv: smart_tv[:brands][:samsung].length,
       lg_smart_tv: smart_tv[:brands][:lg].length,
