@@ -90,56 +90,56 @@ export const volatilityDataCompiler = (index) => {
   let smartSamsungGraph = {
     x: dates,
     y: smartSamsung,
-    mode: 'markers',
+    mode: 'lines+markers',
     type: 'scatter',
     name: 'Samsung'
   };
   let smartLGGraph = {
     x: dates,
     y: smartLG,
-    mode: 'markers',
+    mode: 'lines+markers',
     type: 'scatter',
     name: 'LG'
   };
   let smartToshibaGraph = {
     x: dates,
     y: smartToshiba,
-    mode: 'markers',
+    mode: 'lines+markers',
     type: 'scatter',
     name: 'Toshiba'
   };
   let smartSonyGraph = {
     x: dates,
     y: smartSony,
-    mode: 'markers',
+    mode: 'lines+markers',
     type: 'scatter',
     name: 'Sony'
   };
   let curvedSamsungGraph = {
     x: dates,
     y: curvedSamsung,
-    mode: 'markers',
+    mode: 'lines+markers',
     type: 'scatter',
     name: 'Samsung'
   };
   let curvedLGGraph = {
     x: dates,
     y: curvedLG,
-    mode: 'markers',
+    mode: 'lines+markers',
     type: 'scatter',
     name: 'LG'
   };
   let curvedToshibaGraph = {
     x: dates,
     y: curvedToshiba,
-    mode: 'markers',
+    mode: 'lines+markers',
     type: 'scatter',
     name: 'Toshiba'
   };
   let curvedSonyGraph = {
     x: dates,
     y: curvedSony,
-    mode: 'markers',
+    mode: 'lines+markers',
     type: 'scatter',
     name: 'Sony'
   };

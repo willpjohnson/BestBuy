@@ -41,7 +41,6 @@ class SearchResults extends React.Component {
     let current = this.props.current;
     return(
       <div id="search-results-div">
-        <h1 id="fetch-new-results-button" onClick={this.props.fetchNewSearch}>Click To Get New Results</h1>
         <div id="current-results-div">
           <h1>Most Recent Result</h1>
           <p>{this.props.current.created_at}</p>
@@ -49,6 +48,12 @@ class SearchResults extends React.Component {
             <div className="search-term smart">
               <h2>'smart tv'</h2>
               <p>{current.total_smart_tv} total results</p>
+              <ul>
+                <li>Samsung had {current.samsung_smart_tv} ({Math.floor((current.samsung_smart_tv / current.total_smart_tv) * 100)}%)</li>
+                <li>LG had {current.lg_smart_tv} ({Math.floor((current.lg_smart_tv / current.total_smart_tv) * 100)}%)</li>
+                <li>Toshiba had {current.toshiba_smart_tv} ({Math.floor((current.toshiba_smart_tv / current.total_smart_tv) * 100)}%)</li>
+                <li>Sony had {current.sony_smart_tv} ({Math.floor((current.sony_smart_tv / current.total_smart_tv) * 100)}%)</li>
+              </ul>
               <div className="bar-graph" id="current-smart-tv-graph"></div>
               <p>Top 3 Results Breakdown:</p>
               <ul>
@@ -61,6 +66,12 @@ class SearchResults extends React.Component {
             <div className="search-term curved">
               <h2>'smart curved tv'</h2>
               <p>{current.total_curved_tv} total results</p>
+              <ul>
+                <li>Samsung had {current.samsung_curved_tv} ({Math.floor((current.samsung_curved_tv / current.total_curved_tv) * 100)}%)</li>
+                <li>LG had {current.lg_curved_tv} ({Math.floor((current.lg_curved_tv / current.total_curved_tv) * 100)}%)</li>
+                <li>Toshiba had {current.toshiba_curved_tv} ({Math.floor((current.toshiba_curved_tv / current.total_curved_tv) * 100)}%)</li>
+                <li>Sony had {current.sony_curved_tv} ({Math.floor((current.sony_curved_tv / current.total_curved_tv) * 100)}%)</li>
+              </ul>
               <div className="bar-graph" id="current-curved-tv-graph"></div>
               <p>Top 3 Results Breakdown:</p>
                 <ul>
