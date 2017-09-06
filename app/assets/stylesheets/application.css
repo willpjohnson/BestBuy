@@ -45,11 +45,13 @@ h1 {
 
 #fetch-new-results-button {
   margin: 0 auto;
+  margin-top: 20px;
   font-size: 16px;
-  width: 180px;
+  width: 200px;
   border: 1px solid black;
   text-align: center;
   cursor: pointer;
+  background-color: white;
 }
 
 #current-results-div {

@@ -43,6 +43,7 @@ class SearchResults extends React.Component {
       <div id="search-results-div">
         <div id="current-results-div">
           <h1>Most Recent Result</h1>
+
           <p>{this.props.current.created_at}</p>
           <div id="current-results-search-terms">
             <div className="search-term smart">
@@ -88,12 +89,13 @@ class SearchResults extends React.Component {
           <div className="scatter-graph" id="ratings-scatter-graph"></div>
         </div>
         <div id="index-results-div">
-          <h1>Reults History</h1>
+          <h1>Results History</h1>
           <h2>'smart tv'</h2>
           <div className="scatter-graph" id="smart-index-graph"></div>
           <h2>'curved smart tv'</h2>
           <div className="scatter-graph" id="curved-index-graph"></div>
         </div>
+        <h1 id="fetch-new-results-button" onClick={this.props.fetchNewSearch}>Click To Fetch New Search</h1>
       </div>
     )
   }
