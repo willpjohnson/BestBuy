@@ -38,7 +38,9 @@ h1 {
   margin-top: 40px;
 }
 
-#search-results-div {
+#title {
+  font-family: 'Anton', sans-serif;
+  font-size: 60px;
 }
 
 #fetch-new-results-button {
@@ -80,10 +82,14 @@ h1 {
 .bar-graph {
   width: 300px;
   height: 250px;
+  border: 1px solid black;
+  border-radius: 3px;
 }
 
 .scatter-graph {
   width: 600px;
   height: 400px;
+  border: 1px solid black;
+  border-radius: 3px;
   margin: 0 auto;
 }
