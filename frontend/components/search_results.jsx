@@ -44,6 +44,7 @@ class SearchResults extends React.Component {
         <h1 id="fetch-new-results-button" onClick={this.props.fetchNewSearch}>Click To Get New Results</h1>
         <div id="current-results-div">
           <h1>Most Recent Result</h1>
+          <p>{this.props.current.created_at}</p>
           <div id="current-results-search-terms">
             <div className="search-term smart">
               <h2>'smart tv'</h2>
