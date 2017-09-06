@@ -95,6 +95,7 @@ class SearchResults extends React.Component {
           <h2>'curved smart tv'</h2>
           <div className="scatter-graph" id="curved-index-graph"></div>
         </div>
+        <h1 id="fetch-new-results-button" onClick={this.props.fetchNewSearch}>Click To Fetch New Search</h1>
       </div>
     )
   }
